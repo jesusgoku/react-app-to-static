@@ -1,6 +1,7 @@
 .App {
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .App__Title {
@@ -10,9 +11,11 @@
 .App__Nav {
   border-top: 10px solid #eaeaea;
   border-bottom: 10px solid #eaeaea;
-  
+
   display: flex;
   justify-content: center;
+
+  margin-bottom: 20px;
 }
 
 .App__NavLink,

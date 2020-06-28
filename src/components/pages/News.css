@@ -1,0 +1,44 @@
+.News__List {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.News__ListItem {
+  flex: 1 0 48%;
+
+  margin: 5px;
+
+  border: 1px solid #eaeaea;
+  background-color: #eaeaea;
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  .News__ListItem {
+    flex-basis: 21%;
+  }
+}
+
+.News__ListItemLink,
+.News__ListItemLink:link,
+.News__ListItemLink:active,
+.News__ListItemLink:visited,
+.News__ListItemLink:hover {
+  text-decoration: none;
+  color: purple;
+}
+
+.News__ListItemImage {
+  width: 100%;
+}
+
+.News__ListItemTitle {
+  margin: 0;
+  padding: 10px;
+}

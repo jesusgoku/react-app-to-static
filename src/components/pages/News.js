@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { fetchNews } from '../../services/news';
 
+import './News.css';
+
 function News() {
   const [news, setNews] = useState([]);
 
@@ -17,12 +19,16 @@ function News() {
     <div className="News">
       <Helmet title="ReactSnapshot: News" />
 
-      <h2>News</h2>
+      <h2 className="News__Title">News</h2>
 
-      <ul>
-        {news.map(({ slug, title }) => (
-          <li key={slug}>
-            <Link to={`/news/${slug}`}>{title}</Link>
+      <ul className="News__List">
+        {news.map(({ slug, title, thumb }) => (
+          <li key={slug} className="News__ListItem">
+            <Link to={`/news/${slug}`} className="News__ListItemLink">
+              <img src={thumb} alt={title} className="News__ListItemImage" />
+
+              <h3 className="News__ListItemTitle">{title}</h3>
+            </Link>
           </li>
         ))}
       </ul>
